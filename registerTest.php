@@ -1,5 +1,4 @@
 <?php
-
 $link = mysqli_connect("localhost", "root", "7269", "Capstone");
 
 if (!$link) {
@@ -15,8 +14,14 @@ mysqli_set_charset($link, "utf8");
  * 변수에 대입하여 놓고 그 변수를 이용하는 것이 정확성과 보안성에서 더 나음
  */
 
-$name = $_POST['name'];
-$address = $_POST['address'];
+$name = $_POST['_name'];
+$id = $_POST['_id'];
+$pw = $_POST['_password'];
+$gender = $_POST['_gender'];
+$age = $_POST['_age'];
+
+$search_sql = "SELECT _id from Capstone.UserInfo where _id = ${id}";
+$search_result = mysqli_query($link,$sql);
 
 /*
  * values의 인자는 반드시 작은따옴표로 묶여있어야 한다.
@@ -32,5 +37,3 @@ if ($result) {
 } else {
     echo "쿼리 실패\n";
 }
-
-
