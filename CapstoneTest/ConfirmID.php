@@ -20,9 +20,6 @@ $sql = "select user_id from UserInfoTBL where user_id = '$arg1'";
 // 쿼리 실행 (return true or false)
 $result = mysqli_query($link, $sql);
 
-// 데이터 배열 생성
-$data = array();
-
 if ($result) {
     $row = mysqli_fetch_row($result);
     if($row){
