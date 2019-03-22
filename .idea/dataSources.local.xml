@@ -21,7 +21,7 @@
       </ssh-properties>
     </data-source>
     <data-source name="SYSTEM@localhost" uuid="d202f677-aa3a-4843-a549-0dce649b7dfd">
-      <database-info product="MySQL" version="10.1.34-MariaDB-0ubuntu0.18.04.1" jdbc-version="4.2" driver-name="MariaDB connector/J" driver-version="2.2.1" dbms="MYSQL" exact-version="10.1.34" exact-driver-version="2.2">
+      <database-info product="MySQL" version="10.1.38-MariaDB-0ubuntu0.18.04.1" jdbc-version="4.2" driver-name="MariaDB connector/J" driver-version="2.2.1" dbms="MYSQL" exact-version="10.1.38" exact-driver-version="2.2">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

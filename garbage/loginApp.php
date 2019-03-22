@@ -32,16 +32,24 @@ $sql = "select user_id,user_pw from UserInfoTBL where user_id = '$userId'";
 // 쿼리 실행 (return true or false)
 $result = mysqli_query($link, $sql);
 
+
 if ($result) {
+    // 쿼리 성공
+
+    // 쿼리한 결과를 배열 받음
     $row = mysqli_fetch_row($result);
     if ($row) {
         if (strcmp($row[USER_PW],$userPw) == 0) {
+            // 아이디와 비밀번호 모두 일하는 경우
             echo "SUCCESS_LOGIN";
             return;
         }
+        // 아이디는 있지만 비밀번호가 틀릴 경우
         echo "NOT_EQUAL_PASSWORD";
         return;
     } else {
+
+        // 아이디가 존재하지 않을 경우
         echo "NOT_SEARCH_ID";
         return;
     }
